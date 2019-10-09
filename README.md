@@ -161,7 +161,8 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 | **StyleGAN** | Style-based GAN             | Dec 2018 | NVIDIA      | [paper](https://arxiv.org/abs/1812.04948) |
 
 
-> GAN -> DCGAN -> CoGAN -> ProGAN -> StyleGAN
+> 2014 (GAN) → 2015 (DCGAN) → 2016 (CoGAN) → 2017 (ProGAN) → 2018 (StyleGAN)
+> ![](img/gan-progress.jpg)
 
 #### GANS (order by type)
 - **CGAN**: Only one particular class generation (instead of blurry multiclass).
