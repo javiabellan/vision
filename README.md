@@ -1,15 +1,32 @@
-<h1 align="center">Vision</h1>
+<h1 align="center">👀 Vision</h1>
+
+> ### Index
+>
+> #### Part 1: DL applications
+> 
+> 1. [**Classification**](#classification)
+> 3. [**Object detection**](#object-detection)
+> 3. [**Segmentation**](#segmentation)
+> 4. [**GANs**](#gans)
+> 5. [**Loss functions**](#loss-functions)
+> 6. [**CNN explainability**](#cnn-explainability)
+>
+> #### Part 2: Traditional applications
+> 
+> 7. [**Optical Character Recognition (OCR)**](#ocr)
+> 8. [**Object Tracking**](#object-tracking)
+>
+> [**Resources**](#resources)
 
 
-> - [Pretrained models in pytorch](https://github.com/Cadene/pretrained-models.pytorch)
-> - [Ranking](https://openreview.net/pdf?id=Hyzq4ZKa97),
-> - [comparison paper](https://arxiv.org/pdf/1810.00736.pdf)
-> - [Little tricks paper](https://arxiv.org/abs/1812.01187)
-> - [GPipe](https://arxiv.org/pdf/1811.06965v4.pdf)
 - [Convolutional Neural Network (CNN)](/posts/5-vision/cnn.md) For fixed size oredered data, like images
   - Variable input size: use **adaptative pooling**, final layers then:
     - Option 1: `AdaptiveAvgPool2d((1, 1))` -> `Linear(num_features, num_classes)` (less computation)
     - Option 2: `Conv2d(num_features, num_classes, 3, padding=1)` -> `AdaptiveAvgPool2d((1, 1))`
+    
+
+# Sota CNNs
+
 - **Small nets**: Useful for mobile phones.
   - **SqueezeNet** (2016): v1.0: `58.108`, v1.1: `58.250`. [*paper*](https://arxiv.org/abs/1602.07360).
   - **Mobilenet v1** (2017): `69.600`The standard convolution is decomposed into two. Accuracy similar to Resnet-18. [*paper*](https://arxiv.org/abs/1704.04861)
@@ -112,22 +129,44 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
   - pix2pixHD
   - COVST: Naively add temporal consistency.
   - [Video-to-Video Synthesis](https://tcwang0509.github.io/vid2vid/)
-- [Generative advesarial network (GAN)](/posts/5-vision/gan.md)
-  - Process
-    1. Train a bit the generator and save generated images. `unet_learner` with pixelMSE loss
-    2. Train bit the discriminator with real vs generated images. `create_critic_learner`
-    3. Ping-pong train both nets `GANLearner` with 2 losses pixelMSE and discriminator.
-  - Discriminative model with Spectral Normalization
-  - Loss with adaptive loss
-  - Metric accuracy is accuracy_thres_expand
-  - [infoGAN](http://www.depthfirstlearning.com/2018/InfoGAN)
-  - BigGAN: SotA in image synthesis. Same GAN techiques, much larger scale. Increase model capacity + increase batch size.
-  - [10 types of GANs](https://amp.reddit.com/r/MachineLearning/comments/8z97mx/r_math_insights_from_10_gan_papers_infogans)
 - [Inceptionism](/posts/5-vision/inceptionism.md)
 - [Capsule net](/posts/5-vision/capsule.md)
 
 > To speed up jpeg image I/O from the disk one should not use PIL, skimage and even OpenCV but look for libjpeg-turbo or PyVips.
 
+# GANs
+
+- Training
+  1. Train a bit the generator and save generated images. `unet_learner` with pixelMSE loss
+  2. Train bit the discriminator with real vs generated images. `create_critic_learner`
+  3. Ping-pong train both nets `GANLearner` with 2 losses pixelMSE and discriminator.
+- Discriminative model with Spectral Normalization
+- Loss with adaptive loss
+- Metric accuracy is accuracy_thres_expand
+  
+#### GANs (order chronologically)
+1. **GAN**:    Generative Adversarial Network
+2. **DCGAN**:  Deep Convolutional GAN
+3. **CGAN**:   Conditional GAN
+4. **CycleGAN**:
+5. **CoGAN**:  Coupled GAN
+6. **ProGAN**: Progressive growing of GAN
+7. **WGAN**:   Wasserstein GAN
+8. **SAGAN**:  Self-Attention GAN
+9. **BigGAN**:  SotA for image synthesis. Same GAN techiques, but larger. Increase model capacity & batch size.
+10. **StyleGAN**: Style-based GAN
+
+#### GANS (order by type)
+- **InfoGAN**: Disentaged representation (Dec. 2016, OpenAI)
+  - **CycleGAN**: Domain adaptation (Oct. 2017, Berkeley)
+  - **SAGAN**: Self-Attention GAN (May. 2018, Google)
+  - **Relativistic GAN**: Rethinking adversary (Jul. 2018, LD Isntitute)
+  - **Progressive GAN**: One step at a time (Feb. 2018, NVIDIA)
+- **DCGAN**: Deep Convolutional GAN (Nov. 2016, Facebook)
+  - **BEGAN**: Balancing Generator (May. 2017, Google)
+  - **WGAN**: Wasserstein GAN. Learning distribution (Dec. 2017, Facebook)
+- **VAEGAN**: Improving VAE by GANs (Feb. 2016, TU Denmark)
+- **SeqGAN**: Sequence learning with GANs (May 2017, Shangai Univ.)
 
 
 # Loss functions and metrics
@@ -138,3 +177,17 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
     - **Dice** (F1): `2 * (Pred ∩ GT)/(Pred + GT)` = `2·TP / 2·TP + FP * FN`
       - Range from `0` (worst) to `1` (best)
       - In order to formulate a loss function which can be minimized, we'll simply use `1 − Dice`
+
+---
+
+# Resources
+- [pyimagesearch: Start here](https://www.pyimagesearch.com/start-here)
+- GANs
+  - [10 types of GANs](https://amp.reddit.com/r/MachineLearning/comments/8z97mx/r_math_insights_from_10_gan_papers_infogans)
+  - [floydhub: GANs, the Story So Far](https://blog.floydhub.com/gans-story-so-far)
+  - [infoGAN](http://www.depthfirstlearning.com/2018/InfoGAN)
+- [Pretrained models in pytorch](https://github.com/Cadene/pretrained-models.pytorch)
+- [Ranking](https://openreview.net/pdf?id=Hyzq4ZKa97),
+- [comparison paper](https://arxiv.org/pdf/1810.00736.pdf)
+- [Little tricks paper](https://arxiv.org/abs/1812.01187)
+- [GPipe](https://arxiv.org/pdf/1811.06965v4.pdf)
