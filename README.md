@@ -136,6 +136,8 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 # GANs
 
+### Check this [kaggle competition](https://www.kaggle.com/c/generative-dog-images)
+
 - Training
   1. Train a bit the generator and save generated images. `unet_learner` with pixelMSE loss
   2. Train bit the discriminator with real vs generated images. `create_critic_learner`
