@@ -145,24 +145,33 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 - Metric accuracy is accuracy_thres_expand
   
 #### GANs (order chronologically)
-1. **GAN**:    Generative Adversarial Network
-2. **DCGAN**:  Deep Convolutional GAN
-3. **CGAN**:   Conditional GAN
-4. **CycleGAN**:
-5. **CoGAN**:  Coupled GAN
-6. **ProGAN**: Progressive growing of GAN
-7. **WGAN**:   Wasserstein GAN
-8. **SAGAN**:  Self-Attention GAN
-9. **BigGAN**:  SotA for image synthesis. Same GAN techiques, but larger. Increase model capacity & batch size.
-10. **StyleGAN**: Style-based GAN
+
+|              | Name                        | Date     | Creator     | Paper                                     |
+|:------------:|-----------------------------|:--------:|:-----------:|-------------------------------------------|
+| **GAN**      | Generative Adversarial Net  | Jun 2014 | Montreal U. | [paper](https://arxiv.org/abs/1406.2661)  |
+| **CGAN**     | Conditional GAN             | Nov 2014 | Montreal U. | [paper](https://arxiv.org/abs/1411.1784)  |
+| **DCGAN**    | Deep Convolutional GAN      | Nov 2015 | Facebook    | [paper](https://arxiv.org/abs/1511.06434) |
+| **InfoGAN**  |                             | Jun 2016 | OpenAI      | [paper](https://arxiv.org/abs/1606.03657) |
+| **CoGAN**    | Coupled GAN                 | Jun 2016 | Mitsubishi  | [paper](https://arxiv.org/abs/1606.07536) |
+| **WGAN**     | Wasserstein GAN             | Jan 2017 | Facebook    | [paper](https://arxiv.org/abs/1701.07875) |
+| **CycleGAN** | Cycle GAN                   | Mar 2017 | Berkeley    | [paper](https://arxiv.org/abs/1703.10593) |
+| **ProGAN**   | Progressive growing of GAN  | Oct 2017 | NVIDIA      | [paper](https://arxiv.org/abs/1710.10196) |
+| **SAGAN**    | Self-Attention GAN          | May 2018 | Goodfellow  | [paper](https://arxiv.org/abs/1805.08318) |
+| **BigGAN**   | Large Scale GAN Training    | Sep 2018 | Google      | [paper](https://arxiv.org/abs/1809.11096) |
+| **StyleGAN** | Style-based GAN             | Dec 2018 | NVIDIA      | [paper](https://arxiv.org/abs/1812.04948) |
+
+
+> GAN -> DCGAN -> CoGAN -> ProGAN -> StyleGAN
 
 #### GANS (order by type)
+- **CGAN**: Only one particular class generation (instead of blurry multiclass).
 - **InfoGAN**: Disentaged representation (Dec. 2016, OpenAI)
   - **CycleGAN**: Domain adaptation (Oct. 2017, Berkeley)
   - **SAGAN**: Self-Attention GAN (May. 2018, Google)
   - **Relativistic GAN**: Rethinking adversary (Jul. 2018, LD Isntitute)
-  - **Progressive GAN**: One step at a time (Feb. 2018, NVIDIA)
+  - **Progressive GAN**: One step at a time (Oct 2017, NVIDIA)
 - **DCGAN**: Deep Convolutional GAN (Nov. 2016, Facebook)
+  - **BigGAN**: SotA for image synthesis. Same GAN techiques, but larger. Increase model capacity & batch size.
   - **BEGAN**: Balancing Generator (May. 2017, Google)
   - **WGAN**: Wasserstein GAN. Learning distribution (Dec. 2017, Facebook)
 - **VAEGAN**: Improving VAE by GANs (Feb. 2016, TU Denmark)
