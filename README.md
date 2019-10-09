@@ -1,5 +1,6 @@
 <h1 align="center">Vision</h1>
 
+
 > - [Pretrained models in pytorch](https://github.com/Cadene/pretrained-models.pytorch)
 > - [Ranking](https://openreview.net/pdf?id=Hyzq4ZKa97),
 > - [comparison paper](https://arxiv.org/pdf/1810.00736.pdf)
@@ -53,7 +54,7 @@
   - **AmoebaNet**: `83.000` [*paper*](https://arxiv.org/abs/1802.01548)
 
 
-### [5.2 CNN Black box explanation](/posts/5-vision/explanation.md)
+# CNN explainability
 [*link 1*](https://github.com/utkuozbulak/pytorch-cnn-visualizations), [*link 2*](https://ramprs.github.io/2017/01/21/Grad-CAM-Making-Off-the-Shelf-Deep-Models-Transparent-through-Visual-Explanations.html)
 - **Features**: Average features on the channel axis. This shows all classes detected. `[512, 11, 11]-->[11, 11]`.
 - **CAM**: Class Activation Map. Final features multiplied by a single class weights and then averaged. `[512, 11, 11]*[512]-->[11, 11]`. [*paper*](https://arxiv.org/abs/1512.04150).
@@ -62,7 +63,7 @@
 - Extra: [Distill: feature visualization](https://distill.pub/2017/feature-visualization/)
 - Extra: [Distill: building blocks](https://distill.pub/2018/building-blocks/)
 
-### [5.3 Object detection](/posts/5-vision/detection.md)
+# Object detection
 Get bounding boxes. Check [**detectron**](https://github.com/facebookresearch/detectron).
 - Region-based methods
   - **R-CNN**:        [*paper*](https://arxiv.org/abs/1311.2524)
@@ -78,7 +79,14 @@ Get bounding boxes. Check [**detectron**](https://github.com/facebookresearch/de
   - **RetinaNet**: (2017) Focal Loss for Dense Object Detection [*paper*](https://arxiv.org/abs/1708.02002)
   - **Path Aggregation Network** (2018) [*paper*](https://arxiv.org/abs/1803.01534)
 
-### [5.4 Segmentation](/posts/5-vision/segmentation.md)
+# Segmentation
+
+> - https://www.jeremyjordan.me/semantic-segmentation
+> - https://www.jeremyjordan.me/evaluating-image-segmentation-models
+
+### Check [Res2Net](https://arxiv.org/abs/1904.01169)
+### Check [catalyst segmentation tutorial (Ranger opt, albumentations, ...)](https://colab.research.google.com/github/catalyst-team/catalyst/blob/master/examples/notebooks/segmentation-tutorial.ipynb#scrollTo=Zm7JsNrczOQG)
+
 Get pixel-level classes. Note that the model backbone can be a resnet, densenet, inception... Check [this repo](https://github.com/qubvel/segmentation_models)
 
 - Semantic segmentation
@@ -92,7 +100,7 @@ Get pixel-level classes. Note that the model backbone can be a resnet, densenet,
   - **Feature Pyramid Networks (FPN)** (2016) [*paper*](https://arxiv.org/abs/1612.03144), [*slides*](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)
   - **Path Aggregation Network** (2018) [*paper*](https://arxiv.org/abs/1803.01534)
   
-### [5.5 Generative](/posts/5-vision/generative.md)
+# Generative
 Useful for data augmentation, B&W colorization, super-resolution, artistic style...
 
 - **No GANs** (Image-to-image):
@@ -119,3 +127,14 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 - [Capsule net](/posts/5-vision/capsule.md)
 
 > To speed up jpeg image I/O from the disk one should not use PIL, skimage and even OpenCV but look for libjpeg-turbo or PyVips.
+
+
+
+# Loss functions and metrics
+- Loss
+  - **Segmentation**: Usually Loss = **IoU** + **Dice** + 0.8***BCE**
+    - **Pixel-wise cross entropy**: each pixel individually, comparing the class predictions (depth-wise pixel vector)
+    - **IoU** (F0): `(Pred ∩ GT)/(Pred ∪ GT)` = `TP / TP + FP * FN`
+    - **Dice** (F1): `2 * (Pred ∩ GT)/(Pred + GT)` = `2·TP / 2·TP + FP * FN`
+      - Range from `0` (worst) to `1` (best)
+      - In order to formulate a loss function which can be minimized, we'll simply use `1 − Dice`
