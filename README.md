@@ -148,11 +148,14 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 |              | Name                        | Date     | Creator     | Paper                                     |
 |:------------:|-----------------------------|:--------:|:-----------:|-------------------------------------------|
-| **GAN**      | Generative Adversarial Net  | Jun 2014 | Montreal U. | [paper](https://arxiv.org/abs/1406.2661)  |
+| **GAN**      | Generative Adversarial Net  | Jun 2014 | Goodfellow  | [paper](https://arxiv.org/abs/1406.2661)  |
 | **CGAN**     | Conditional GAN             | Nov 2014 | Montreal U. | [paper](https://arxiv.org/abs/1411.1784)  |
 | **DCGAN**    | Deep Convolutional GAN      | Nov 2015 | Facebook    | [paper](https://arxiv.org/abs/1511.06434) |
+| **GAN v2**   | Improved GAN                | Jun 2016 | Goodfellow  | [paper](https://arxiv.org/abs/1606.03498) |
 | **InfoGAN**  |                             | Jun 2016 | OpenAI      | [paper](https://arxiv.org/abs/1606.03657) |
 | **CoGAN**    | Coupled GAN                 | Jun 2016 | Mitsubishi  | [paper](https://arxiv.org/abs/1606.07536) |
+| **Pix2Pix**  | Image to Image              | Nov 2016 | Berkeley    | [paper](https://arxiv.org/abs/1611.07004) |
+| **StackGAN** | Text to Image               | Dec 2016 | Baidu       | [paper](https://arxiv.org/abs/1612.03242) |
 | **WGAN**     | Wasserstein GAN             | Jan 2017 | Facebook    | [paper](https://arxiv.org/abs/1701.07875) |
 | **CycleGAN** | Cycle GAN                   | Mar 2017 | Berkeley    | [paper](https://arxiv.org/abs/1703.10593) |
 | **ProGAN**   | Progressive growing of GAN  | Oct 2017 | NVIDIA      | [paper](https://arxiv.org/abs/1710.10196) |
