@@ -170,6 +170,10 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 > ![](img/gan-progress.jpg)
 
 #### GANS (order by type)
+- Better error function
+  - LSGAN https://arxiv.org/abs/1611.04076
+  - RaGAN https://arxiv.org/abs/1807.00734
+  - GAN v2 (Feature Matching) https://arxiv.org/abs/1606.03498
 - **CGAN**: Only one particular class generation (instead of blurry multiclass).
 - **InfoGAN**: Disentaged representation (Dec. 2016, OpenAI)
   - **CycleGAN**: Domain adaptation (Oct. 2017, Berkeley)
