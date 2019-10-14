@@ -2,7 +2,7 @@
 
 > ### Index
 >
-> #### Part 1: DL applications
+> #### Part 1: Deep Learning
 > 
 > 1. [**Classification**](#classification)
 > 3. [**Object detection**](#object-detection)
@@ -11,13 +11,16 @@
 > 5. [**Loss functions**](#loss-functions)
 > 6. [**CNN explainability**](#cnn-explainability)
 >
-> #### Part 2: Traditional applications
+> #### Part 2: Traditional vision
 > 
 > 7. [**Optical Character Recognition (OCR)**](#ocr)
-> 8. [**Object Tracking**](#object-tracking)
+> 8. [**Image Matching (SIFT)**](#image-matching-sift)
+> 9. [**Object Tracking**](#object-tracking)
 >
 > [**Resources**](#resources)
 
+---
+<h3 align="center">Part 1: Deep Learning</h3>
 
 - [Convolutional Neural Network (CNN)](/posts/5-vision/cnn.md) For fixed size oredered data, like images
   - Variable input size: use **adaptative pooling**, final layers then:
@@ -80,13 +83,21 @@
 - Extra: [Distill: feature visualization](https://distill.pub/2017/feature-visualization/)
 - Extra: [Distill: building blocks](https://distill.pub/2018/building-blocks/)
 
+> ### Libraries
+> - [Captum](https://www.captum.ai) by Pytorch
+> - [Lucid](https://github.com/tensorflow/lucid) by Tensorflow
+
+
 # Object detection
-Get bounding boxes. Check [**detectron**](https://github.com/facebookresearch/detectron).
+Get bounding boxes.
+
+> ### Check [**detectron 2**](https://ai.facebook.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-).
+
 - Region-based methods
   - **R-CNN**:        [*paper*](https://arxiv.org/abs/1311.2524)
   - **Fast R-CNN**:   [*paper*](https://arxiv.org/abs/1504.08083)
   - **Faster R-CNN**: [*paper*](https://arxiv.org/abs/1506.01497)
-  - **Mask R-CNN**: [*paper*](https://arxiv.org/abs/1703.06870)
+  - **Mask R-CNN**:   [*paper*](https://arxiv.org/abs/1703.06870)
 - Single-shot methods
   - **YOLOv1**: [*paper*](https://arxiv.org/abs/1506.02640)
   - **SSD**:    [*paper*](https://arxiv.org/abs/1512.02325)
@@ -95,6 +106,7 @@ Get bounding boxes. Check [**detectron**](https://github.com/facebookresearch/de
   - **Feature Pyramid Networks (FPN)** (2016) [*paper*](https://arxiv.org/abs/1612.03144), [*slides*](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)
   - **RetinaNet**: (2017) Focal Loss for Dense Object Detection [*paper*](https://arxiv.org/abs/1708.02002)
   - **Path Aggregation Network** (2018) [*paper*](https://arxiv.org/abs/1803.01534)
+
 
 # Segmentation
 
@@ -148,22 +160,22 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
   
 #### GANs (order chronologically)
 
-|              | Name                        | Date     | Creator     | Paper                                     |
-|:------------:|-----------------------------|:--------:|:-----------:|-------------------------------------------|
-| **GAN**      | Generative Adversarial Net  | Jun 2014 | Goodfellow  | [paper](https://arxiv.org/abs/1406.2661)  |
-| **CGAN**     | Conditional GAN             | Nov 2014 | Montreal U. | [paper](https://arxiv.org/abs/1411.1784)  |
-| **DCGAN**    | Deep Convolutional GAN      | Nov 2015 | Facebook    | [paper](https://arxiv.org/abs/1511.06434) |
-| **GAN v2**   | Improved GAN                | Jun 2016 | Goodfellow  | [paper](https://arxiv.org/abs/1606.03498) |
-| **InfoGAN**  |                             | Jun 2016 | OpenAI      | [paper](https://arxiv.org/abs/1606.03657) |
-| **CoGAN**    | Coupled GAN                 | Jun 2016 | Mitsubishi  | [paper](https://arxiv.org/abs/1606.07536) |
-| **Pix2Pix**  | Image to Image              | Nov 2016 | Berkeley    | [paper](https://arxiv.org/abs/1611.07004) |
-| **StackGAN** | Text to Image               | Dec 2016 | Baidu       | [paper](https://arxiv.org/abs/1612.03242) |
-| **WGAN**     | Wasserstein GAN             | Jan 2017 | Facebook    | [paper](https://arxiv.org/abs/1701.07875) |
-| **CycleGAN** | Cycle GAN                   | Mar 2017 | Berkeley    | [paper](https://arxiv.org/abs/1703.10593) |
-| **ProGAN**   | Progressive growing of GAN  | Oct 2017 | NVIDIA      | [paper](https://arxiv.org/abs/1710.10196) |
-| **SAGAN**    | Self-Attention GAN          | May 2018 | Goodfellow  | [paper](https://arxiv.org/abs/1805.08318) |
-| **BigGAN**   | Large Scale GAN Training    | Sep 2018 | Google      | [paper](https://arxiv.org/abs/1809.11096) |
-| **StyleGAN** | Style-based GAN             | Dec 2018 | NVIDIA      | [paper](https://arxiv.org/abs/1812.04948) |
+| Paper                                            | Name                        | Date     | Creator     |
+|:------------------------------------------------:|-----------------------------|:--------:|:-----------:|
+| [**GAN**     ](https://arxiv.org/abs/1406.2661)  | Generative Adversarial Net  | Jun 2014 | Goodfellow  |
+| [**CGAN**    ](https://arxiv.org/abs/1411.1784)  | Conditional GAN             | Nov 2014 | Montreal U. |
+| [**DCGAN**   ](https://arxiv.org/abs/1511.06434) | Deep Convolutional GAN      | Nov 2015 | Facebook    |
+| [**GAN v2**  ](https://arxiv.org/abs/1606.03498) | Improved GAN                | Jun 2016 | Goodfellow  |
+| [**InfoGAN** ](https://arxiv.org/abs/1606.03657) |                             | Jun 2016 | OpenAI      |
+| [**CoGAN**   ](https://arxiv.org/abs/1606.07536) | Coupled GAN                 | Jun 2016 | Mitsubishi  |
+| [**Pix2Pix** ](https://arxiv.org/abs/1611.07004) | Image to Image              | Nov 2016 | Berkeley    |
+| [**StackGAN**](https://arxiv.org/abs/1612.03242) | Text to Image               | Dec 2016 | Baidu       |
+| [**WGAN**    ](https://arxiv.org/abs/1701.07875) | Wasserstein GAN             | Jan 2017 | Facebook    |
+| [**CycleGAN**](https://arxiv.org/abs/1703.10593) | Cycle GAN                   | Mar 2017 | Berkeley    |
+| [**ProGAN**  ](https://arxiv.org/abs/1710.10196) | Progressive growing of GAN  | Oct 2017 | NVIDIA      |
+| [**SAGAN**   ](https://arxiv.org/abs/1805.08318) | Self-Attention GAN          | May 2018 | Goodfellow  |
+| [**BigGAN**  ](https://arxiv.org/abs/1809.11096) | Large Scale GAN Training    | Sep 2018 | Google      |
+| [**StyleGAN**](https://arxiv.org/abs/1812.04948) | Style-based GAN             | Dec 2018 | NVIDIA      |
 
 
 > 2014 (GAN) → 2015 (DCGAN) → 2016 (CoGAN) → 2017 (ProGAN) → 2018 (StyleGAN)
@@ -198,6 +210,14 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
       - In order to formulate a loss function which can be minimized, we'll simply use `1 − Dice`
 
 ---
+<h3 align="center">Part 2:  Traditional vision</h3>
+
+
+
+# Image Matching (SIFT)
+[Check this article](https://www.analyticsvidhya.com/blog/2019/10/detailed-guide-powerful-sift-technique-image-matching-python)
+
+
 
 # Resources
 - [pyimagesearch: Start here](https://www.pyimagesearch.com/start-here)
