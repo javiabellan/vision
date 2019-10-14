@@ -210,7 +210,6 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 # Image preprocessing
     
 ### Normalization
-Substact RGB mean pixels and divide by RGB std: `x = x-x.mean() / x.std()`
 1. **Mean subtraction**: Center the data to zero. `x = x - x.mean()` fights vanishing and exploding gradients
 2. **Standardize**: Put the data on the same scale. `x = x / x.std()` improves convergence speed and accuracy
 <p align="center"><img width="70%" src="img/normalization.jpg" /></p>
