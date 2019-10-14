@@ -4,19 +4,20 @@
 >
 > #### Part 1: Deep Learning
 > 
-> 1. [**Classification**](#classification)
-> 3. [**Object detection**](#object-detection)
-> 3. [**Segmentation**](#segmentation)
-> 4. [**GANs**](#gans)
-> 5. [**Loss functions**](#loss-functions)
-> 6. [**CNN explainability**](#cnn-explainability)
-> 7. [**Image preprocessing**](#image-preprocessing)
+> - 🧱 [**Classification**](#classification)
+> - [**Object detection**](#object-detection)
+> - [**Segmentation**](#segmentation)
+> - 🖼 [**GANs**](#gans)
+> - 📉 [**Loss functions**](#loss-functions)
+> - 📏 [**Metrics**](#metrics)
+> - 🔍 [**CNN explainability**](#cnn-explainability)
+> - 🔨[**Image preprocessing**](#image-preprocessing)
 >
 > #### Part 2: Traditional vision
 > 
-> 7. [**Optical Character Recognition (OCR)**](#ocr)
-> 8. [**Image Matching (SIFT)**](#image-matching-sift)
-> 9. [**Object Tracking**](#object-tracking)
+> 7. 🔤 [**Optical Character Recognition (OCR)**](#ocr)
+> 8. 👬🏼 [**Image Matching (SIFT)**](#image-matching-sift)
+> 9. ⚽ [**Object Tracking**](#object-tracking)
 >
 > [**Resources**](#resources)
 
