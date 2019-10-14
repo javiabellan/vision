@@ -209,23 +209,20 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 # Image preprocessing
 
-> ### ALWAYS: Substact RGB mean pixels and divide by RGB std 
+### Normalization
+Substact RGB mean pixels and divide by RGB std: `x = x-x.mean() / x.std()`
+![](img/normalization.jpg)
 
-### Datasets with homogeneous common color
+### PCA and Whitening
+![](img/pca-whit.jpg)
 
-#### Subtract local mean
-![](img/sub_local_mean.png)
+### Subtract local mean
+<img src="img/sub_local_mean.png" width="500">
 
-Winner in Kaggle competition: [Diabetic Retinopathy Detection](https://www.kaggle.com/c/diabetic-retinopathy-detection)
-
-#### CLAHE: Contrast Limited Adaptive Histogram Equalization
+### CLAHE: Contrast Limited Adaptive Histogram Equalization
 ![](img/clahe.jpg)
 
-Even better
-
-
-#### Dicom
-
+### Dicom
 > - [Some DICOM gotchas to be aware of (fastai)](https://www.kaggle.com/jhoward/some-dicom-gotchas-to-be-aware-of-fastai)
 > - [DON'T see like a radiologist! (fastai)](https://www.kaggle.com/jhoward/don-t-see-like-a-radiologist-fastai)
 
