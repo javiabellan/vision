@@ -10,7 +10,7 @@
 > 4. [**GANs**](#gans)
 > 5. [**Loss functions**](#loss-functions)
 > 6. [**CNN explainability**](#cnn-explainability)
-> 7. [**Image preprocessing**](*#image-preprocessing)
+> 7. [**Image preprocessing**](#image-preprocessing)
 >
 > #### Part 2: Traditional vision
 > 
@@ -211,16 +211,18 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 ### Normalization
 Substact RGB mean pixels and divide by RGB std: `x = x-x.mean() / x.std()`
-![](img/normalization.jpg)
+<p align="center"><img width="70%" src="img/normalization.jpg" /></p>
 
 ### PCA and Whitening
-![](img/pca-whit.jpg)
+<p align="center"><img width="70%" src="img/pca-whit.jpg" /></p>
+
 
 ### Subtract local mean
-<img src="img/sub_local_mean.png" width="500">
+<p align="center"><img width="50%" src="img/sub_local_mean.png" /></p>
 
 ### CLAHE: Contrast Limited Adaptive Histogram Equalization
-![](img/clahe.jpg)
+<p align="center"><img src="img/clahe.jpg" /></p>
+
 
 ### Dicom
 > - [Some DICOM gotchas to be aware of (fastai)](https://www.kaggle.com/jhoward/some-dicom-gotchas-to-be-aware-of-fastai)
