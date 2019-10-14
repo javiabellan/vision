@@ -10,6 +10,7 @@
 > 4. [**GANs**](#gans)
 > 5. [**Loss functions**](#loss-functions)
 > 6. [**CNN explainability**](#cnn-explainability)
+> 7. [**Image preprocessing**](*#image-preprocessing)
 >
 > #### Part 2: Traditional vision
 > 
@@ -204,9 +205,37 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
      - **Pixel MSE**: Flat the 2D images and compare them with regular MSE.
      - **Discriminator/Critic** The loss function is a binary classification pretrained resnet (real/fake).
      - **Feature losses** or perpetual losses.
+
+
+# Image preprocessing
+
+> ### ALWAYS: Substact RGB mean pixels and divide by RGB std 
+
+### Datasets with homogeneous common color
+
+#### Subtract local mean
+![](img/sub_local_mean.png)
+
+Winner in Kaggle competition: [Diabetic Retinopathy Detection](https://www.kaggle.com/c/diabetic-retinopathy-detection)
+
+#### CLAHE: Contrast Limited Adaptive Histogram Equalization
+![](img/clahe.jpg)
+
+Even better
+
+
+#### Dicom
+
+> - [Some DICOM gotchas to be aware of (fastai)](https://www.kaggle.com/jhoward/some-dicom-gotchas-to-be-aware-of-fastai)
+> - [DON'T see like a radiologist! (fastai)](https://www.kaggle.com/jhoward/don-t-see-like-a-radiologist-fastai)
+
+
+
+
+
+
 ---
 <h3 align="center">Part 2:  Traditional vision</h3>
-
 
 
 # Image Matching (SIFT)
