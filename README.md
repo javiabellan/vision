@@ -8,7 +8,7 @@
 > - [**Object detection**](#object-detection)
 > - [**Segmentation**](#segmentation)
 > - 🖼 [**GANs**](#gans)
-> - 📉 [**Loss functions**](#loss-functions)
+> - 📉 [**Loss functions**](#-loss-functions)
 > - 📏 [**Metrics**](#metrics)
 > - 🔍 [**CNN explainability**](#cnn-explainability)
 > - 🔨[**Image preprocessing**](#image-preprocessing)
@@ -193,19 +193,18 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 - **SeqGAN**: Sequence learning with GANs (May 2017, Shangai Univ.)
 
 
-# Loss functions and metrics
+# 📉 Loss functions
 
-- Loss
-  - **Segmentation**: Usually Loss = **IoU** + **Dice** + 0.8***BCE**
-    - **Pixel-wise cross entropy**: each pixel individually, comparing the class predictions (depth-wise pixel vector)
-    - **IoU** (F0): `(Pred ∩ GT)/(Pred ∪ GT)` = `TP / TP + FP * FN`
-    - **Dice** (F1): `2 * (Pred ∩ GT)/(Pred + GT)` = `2·TP / 2·TP + FP * FN`
-      - Range from `0` (worst) to `1` (best)
-      - In order to formulate a loss function which can be minimized, we'll simply use `1 − Dice`
-  - **Generation**
-     - **Pixel MSE**: Flat the 2D images and compare them with regular MSE.
-     - **Discriminator/Critic** The loss function is a binary classification pretrained resnet (real/fake).
-     - **Feature losses** or perpetual losses.
+- **Segmentation**: Usually Loss = **IoU** + **Dice** + 0.8***BCE**
+  - **Pixel-wise cross entropy**: each pixel individually, comparing the class predictions (depth-wise pixel vector)
+  - **IoU** (F0): `(Pred ∩ GT)/(Pred ∪ GT)` = `TP / TP + FP * FN`
+  - **Dice** (F1): `2 * (Pred ∩ GT)/(Pred + GT)` = `2·TP / 2·TP + FP * FN`
+    - Range from `0` (worst) to `1` (best)
+    - In order to formulate a loss function which can be minimized, we'll simply use `1 − Dice`
+- **Generation**
+   - **Pixel MSE**: Flat the 2D images and compare them with regular MSE.
+   - **Discriminator/Critic** The loss function is a binary classification pretrained resnet (real/fake).
+   - **Feature losses** or perpetual losses.
 
 
 # Image preprocessing
