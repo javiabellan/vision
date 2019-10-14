@@ -26,7 +26,7 @@
   - Variable input size: use **adaptative pooling**, final layers then:
     - Option 1: `AdaptiveAvgPool2d((1, 1))` -> `Linear(num_features, num_classes)` (less computation)
     - Option 2: `Conv2d(num_features, num_classes, 3, padding=1)` -> `AdaptiveAvgPool2d((1, 1))`
-    
+- To speed up jpeg image I/O from the disk one should not use PIL, skimage and even OpenCV but look for libjpeg-turbo or PyVips.
 
 # Sota CNNs
 
@@ -128,28 +128,15 @@ Get pixel-level classes. Note that the model backbone can be a resnet, densenet,
 - Instance segmentation
   - **Feature Pyramid Networks (FPN)** (2016) [*paper*](https://arxiv.org/abs/1612.03144), [*slides*](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)
   - **Path Aggregation Network** (2018) [*paper*](https://arxiv.org/abs/1803.01534)
-  
-# Generative
-Useful for data augmentation, B&W colorization, super-resolution, artistic style...
 
-- **No GANs** (Image-to-image):
-  - **Model**: Pretrained Unet 
-  - **Loss functions**:
-     - **Pixel MSE**: Flat the 2D images and compare them with regular MSE.
-     - **Discriminator/Critic** The loss function is a binary classification pretrained resnet (real/fake).
-     - **Feature losses** or perpetual losses.
-  - pix2pixHD
-  - COVST: Naively add temporal consistency.
-  - [Video-to-Video Synthesis](https://tcwang0509.github.io/vid2vid/)
-- [Inceptionism](/posts/5-vision/inceptionism.md)
-- [Capsule net](/posts/5-vision/capsule.md)
-
-> To speed up jpeg image I/O from the disk one should not use PIL, skimage and even OpenCV but look for libjpeg-turbo or PyVips.
 
 # GANs
 
+Useful for data augmentation, B&W colorization, super-resolution, artistic style...
+
 ### Check this [kaggle competition](https://www.kaggle.com/c/generative-dog-images)
 
+- Generator: Pretrained Unet
 - Training
   1. Train a bit the generator and save generated images. `unet_learner` with pixelMSE loss
   2. Train bit the discriminator with real vs generated images. `create_critic_learner`
@@ -157,6 +144,10 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 - Discriminative model with Spectral Normalization
 - Loss with adaptive loss
 - Metric accuracy is accuracy_thres_expand
+- video
+  - pix2pixHD
+  - COVST: Naively add temporal consistency.
+  - [Video-to-Video Synthesis](https://tcwang0509.github.io/vid2vid/)
   
 #### GANs (order chronologically)
 
@@ -201,6 +192,7 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 
 # Loss functions and metrics
+
 - Loss
   - **Segmentation**: Usually Loss = **IoU** + **Dice** + 0.8***BCE**
     - **Pixel-wise cross entropy**: each pixel individually, comparing the class predictions (depth-wise pixel vector)
@@ -208,7 +200,10 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
     - **Dice** (F1): `2 * (Pred ∩ GT)/(Pred + GT)` = `2·TP / 2·TP + FP * FN`
       - Range from `0` (worst) to `1` (best)
       - In order to formulate a loss function which can be minimized, we'll simply use `1 − Dice`
-
+  - **Generation**
+     - **Pixel MSE**: Flat the 2D images and compare them with regular MSE.
+     - **Discriminator/Critic** The loss function is a binary classification pretrained resnet (real/fake).
+     - **Feature losses** or perpetual losses.
 ---
 <h3 align="center">Part 2:  Traditional vision</h3>
 
@@ -220,6 +215,10 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 
 # Resources
+
+- Others
+  - Inceptionism
+  - Capsule net
 - [pyimagesearch: Start here](https://www.pyimagesearch.com/start-here)
 - GANs
   - [10 types of GANs](https://amp.reddit.com/r/MachineLearning/comments/8z97mx/r_math_insights_from_10_gan_papers_infogans)
