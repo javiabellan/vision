@@ -9,8 +9,9 @@
 >   - [**Object detection**](#object-detection)
 >   - [**Segmentation**](#segmentation)
 > - 🎥 Part 2: Video Understing 
->   - Activity/Action recognition
+>   - [**Activity recognition*](#activity-recognition)
 >   - [**Object Tracking**](#object-tracking)
+>   - [**Product placement**](#product-placement) [paper](https://arxiv.org/abs/1910.03227)
 > - 🧭 Part 3: 3D Understing
 >   - [**SLAM**](#slam)
 >   - [**3D reconstruction**](#3d)
