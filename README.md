@@ -132,16 +132,20 @@ Get bounding boxes.
 
 Get pixel-level classes. Note that the model backbone can be a resnet, densenet, inception... Check [this repo](https://github.com/qubvel/segmentation_models)
 
-- Semantic segmentation
-  - **FCN** Fully Convolutional Networks (2014)
-  - **SegNet** (2015)
-  - **Unet**: Concatenate like a densenet [facebook](https://github.com/facebookresearch/fastMRI/tree/master/models/unet).
-  - **LinkNet**: Adds like a resnet [*paper*](https://arxiv.org/abs/1707.03718)
-  - **Pyramid Scene Parsing Net (PSPNet)** [*paper*](https://arxiv.org/abs/1612.01105)
-  - **DeepLabv3** SotA. Increasing dilatation, increases field-of-view. [paper](https://arxiv.org/abs/1706.05587)
-- Instance segmentation
-  - **Feature Pyramid Networks (FPN)** (2016) [*paper*](https://arxiv.org/abs/1612.03144), [*slides*](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)
-  - **Path Aggregation Network** (2018) [*paper*](https://arxiv.org/abs/1803.01534)
+
+| Name                                              | Description                           | Date     | Instances |
+|:-------------------------------------------------:|---------------------------------------|:--------:|:---------:|
+| [**FCN**      ]()                                 | Fully Convolutional Network           | 2014     |           |
+| [**SegNet**   ](https://arxiv.org/abs/1511.00561) | Encoder-decorder                      | 2015     |           |
+| [**Unet**     ](https://arxiv.org/abs/1505.04597) | Concatenate like a densenet           | 2015     |           |
+| [**ENet**     ](https://arxiv.org/abs/1606.02147) | Real-time **video** segmentation      | 2016     |           |
+| [**PSPNet**   ](https://arxiv.org/abs/1612.01105) | Pyramid Scene Parsing Net             | 2016     |           |
+| [**FPN**      ](https://arxiv.org/abs/1612.03144) | Feature Pyramid Networks              | 2016     | Yes       |
+| [**DeepLabv3**](https://arxiv.org/abs/1706.05587) | Increasing dilatation & field-of-view | 2017     |           |
+| [**LinkNet**  ](https://arxiv.org/abs/1707.03718) | Adds like a resnet                    | 2017     |           |
+| [**PANet**    ](https://arxiv.org/abs/1803.01534) | Path Aggregation Network              | 2018     | Yes       |
+
+> **Feature Pyramid Networks (FPN): [slides](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)**
 
 
 # GANs
