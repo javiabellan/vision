@@ -11,7 +11,7 @@
 > - 🎥 Part 2: Video Understing 
 >   - [**Activity recognition**](#activity-recognition)
 >   - [**Object Tracking**](#object-tracking)
->   - [**Product placement**](#product-placement) [paper](https://arxiv.org/abs/1910.03227)
+>   - [**Product placement**](#product-placement)
 > - 🧭 Part 3: 3D Understing
 >   - [**SLAM**](#slam)
 >   - [**3D reconstruction**](#3d)
@@ -208,6 +208,22 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 - **VAEGAN**: Improving VAE by GANs (Feb. 2016, TU Denmark)
 - **SeqGAN**: Sequence learning with GANs (May 2017, Shangai Univ.)
 
+# Product placement
+
+#### Technology
+- **Background-foreground segmentation** so images simply slide behind objects in the front zone.
+- **Optical flow analysis** helps determine the overall movement of virtual ads.
+- **Planar tracking** helps smooth positioning.
+- **Image color adjustment** is optimized according to the environment.
+
+#### Papers
+- CASE dataset[paper](https://arxiv.org/abs/1903.08943)
+- ALOS dataset[paper](https://arxiv.org/abs/1904.07776)
+- Identifying Candidate Spaces with CASE ds [paper](https://arxiv.org/abs/1910.03227)
+
+#### Companies
+- [Mirriad](https://www.mirriad.com)
+- [Swappear](http://www.swappear.com)
 
 # 📉 Loss functions
 
