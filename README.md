@@ -151,8 +151,13 @@ Get pixel-level classes. Note that the model backbone can be a resnet, densenet,
 > **Feature Pyramid Networks (FPN): [slides](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)**
 
 
-### Other types of segmentation:
+### Depth segmentation
+Learning the Depths of Moving People by Watching Frozen People (mannequin challenge) [paper](https://arxiv.org/abs/1904.11111)
+<p align="center"><img src="img/segmentatioDepth.jpg"/></p>
+
+### Surface normal segmentation
 <p align="center"><img src="img/segmentationOthers.png" /></p>
+
 
 
 # GANs
