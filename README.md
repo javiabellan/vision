@@ -3,6 +3,24 @@
 > ### Index
 >
 > #### Part 1: Deep Learning
+
+> - 🧱 Part 1: Basics
+>   - Classification
+>   - Object Detection
+>   - Segmentation
+> - 🎥 Part 2: Video Understing 
+>   - Activity/Action recognition
+>   - Object Tracking
+> - Part 3: 3D Understing
+>   - SLAM
+>   - CapsuleNets
+> - 🖼 Part 4: Generation
+>   - Autoencoder
+>   - GANs
+> - Part 5: Other
+>   - Super-resolution
+>   - Colourisation
+>   - Style Transfer
 > 
 > - 🧱 [**Classification**](#classification)
 > - [**Object detection**](#object-detection)
@@ -15,9 +33,11 @@
 >
 > #### Part 2: Traditional vision
 > 
-> 7. 🔤 [**Optical Character Recognition (OCR)**](#ocr)
-> 8. 👬🏼 [**Image Matching (SIFT)**](#image-matching-sift)
-> 9. ⚽ [**Object Tracking**](#object-tracking)
+> - 🔤 [**Optical Character Recognition (OCR)**](#ocr)
+> - 👬🏼 [**Image Matching (SIFT)**](#image-matching-sift)
+> - ⚽ [**Object Tracking**](#object-tracking)
+> - [**Simultaneous localization and mapping (SLAM)**](#slam)
+> - [**3D reconstruction**]
 >
 > [**Resources**](#resources)
 
