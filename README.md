@@ -260,6 +260,11 @@ Useful for data augmentation, B&W colorization, super-resolution, artistic style
 
 # Resources
 
+- A year in computer vision
+  - [Part 1](https://towardsdatascience.com/a-year-in-computer-vision-part-1-of-4-eaeb040b6f46)
+  - [Part 2](https://towardsdatascience.com/a-year-in-computer-vision-part-2-of-4-893e18e12be0)
+  - [Part 3](https://towardsdatascience.com/a-year-in-computer-vision-part-3-of-4-861216d71607)
+  - [Part 4](https://towardsdatascience.com/a-year-in-computer-vision-part-4-of-4-515c61d41a00)
 - Others
   - Inceptionism
   - Capsule net
