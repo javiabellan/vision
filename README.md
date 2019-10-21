@@ -153,7 +153,7 @@ Get pixel-level classes. Note that the model backbone can be a resnet, densenet,
 
 ### Depth segmentation
 Learning the Depths of Moving People by Watching Frozen People (mannequin challenge) [paper](https://arxiv.org/abs/1904.11111)
-<p align="center"><img src="img/segmentatioDepth.jpg"/></p>
+<p align="center"><img src="img/segmentationDepth.jpg"/></p>
 
 ### Surface normal segmentation
 <p align="center"><img src="img/segmentationOthers.png" /></p>
