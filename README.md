@@ -5,39 +5,30 @@
 > #### Part 1: Deep Learning
 
 > - 🧱 Part 1: Basics
->   - Classification
->   - Object Detection
->   - Segmentation
+>   - [**Classification**](#classification)
+>   - [**Object detection**](#object-detection)
+>   - [**Segmentation**](#segmentation)
 > - 🎥 Part 2: Video Understing 
 >   - Activity/Action recognition
->   - Object Tracking
-> - Part 3: 3D Understing
->   - SLAM
+>   - [**Object Tracking**](#object-tracking)
+> - 🧭 Part 3: 3D Understing
+>   - [**SLAM**](#slam)
+>   - [**3D reconstruction**](#3d)
 >   - CapsuleNets
 > - 🖼 Part 4: Generation
 >   - Autoencoder
->   - GANs
+>   - [**GANs**](#gans)
 > - Part 5: Other
 >   - Super-resolution
 >   - Colourisation
 >   - Style Transfer
-> 
-> - 🧱 [**Classification**](#classification)
-> - [**Object detection**](#object-detection)
-> - [**Segmentation**](#segmentation)
-> - 🖼 [**GANs**](#gans)
-> - 📉 [**Loss functions**](#-loss-functions)
-> - 📏 [**Metrics**](#metrics)
-> - 🔍 [**CNN explainability**](#cnn-explainability)
-> - 🔨[**Image preprocessing**](#image-preprocessing)
->
-> #### Part 2: Traditional vision
-> 
-> - 🔤 [**Optical Character Recognition (OCR)**](#ocr)
-> - 👬🏼 [**Image Matching (SIFT)**](#image-matching-sift)
-> - ⚽ [**Object Tracking**](#object-tracking)
-> - [**Simultaneous localization and mapping (SLAM)**](#slam)
-> - [**3D reconstruction**]
+>   - [**Optical Character Recognition (OCR)**](#ocr)
+>   - [**Image Matching (SIFT)**](#image-matching-sift)
+> - Part 6: technical
+>   - 📉 [**Loss functions**](#-loss-functions)
+>   - 📏 [**Metrics**](#metrics)
+>   - 🔍 [**CNN explainability**](#cnn-explainability)
+>   - 🔨 [**Image preprocessing**](#image-preprocessing)
 >
 > [**Resources**](#resources)
 
