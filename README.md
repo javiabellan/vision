@@ -126,11 +126,14 @@ Get bounding boxes.
 
 > - https://www.jeremyjordan.me/semantic-segmentation
 > - https://www.jeremyjordan.me/evaluating-image-segmentation-models
+> - Check [Res2Net](https://arxiv.org/abs/1904.01169)
+> - Check [catalyst segmentation tutorial (Ranger opt, albumentations, ...)](https://colab.research.google.com/github/catalyst-team/catalyst/blob/master/examples/notebooks/segmentation-tutorial.ipynb#scrollTo=Zm7JsNrczOQG)
+> - [this repo](https://github.com/qubvel/segmentation_models)
 
-### Check [Res2Net](https://arxiv.org/abs/1904.01169)
-### Check [catalyst segmentation tutorial (Ranger opt, albumentations, ...)](https://colab.research.google.com/github/catalyst-team/catalyst/blob/master/examples/notebooks/segmentation-tutorial.ipynb#scrollTo=Zm7JsNrczOQG)
+<p align="center"><img src="img/segmentationInstance.png" /></p>
 
-Get pixel-level classes. Note that the model backbone can be a resnet, densenet, inception... Check [this repo](https://github.com/qubvel/segmentation_models)
+
+Get pixel-level classes. Note that the model backbone can be a resnet, densenet, inception...
 
 
 | Name                                              | Description                           | Date     | Instances |
@@ -146,6 +149,10 @@ Get pixel-level classes. Note that the model backbone can be a resnet, densenet,
 | [**PANet**    ](https://arxiv.org/abs/1803.01534) | Path Aggregation Network              | 2018     | Yes       |
 
 > **Feature Pyramid Networks (FPN): [slides](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)**
+
+
+### Other types of segmentation:
+<p align="center"><img src="img/segmentationOthers.png" /></p>
 
 
 # GANs
