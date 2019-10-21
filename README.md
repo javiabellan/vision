@@ -158,6 +158,7 @@ Learning the Depths of Moving People by Watching Frozen People (mannequin challe
 ### Surface normal segmentation
 <p align="center"><img src="img/segmentationOthers.png" /></p>
 
+- [paper](https://arxiv.org/abs/1411.4958) (2014)
 
 
 # GANs
