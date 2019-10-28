@@ -175,15 +175,18 @@ Learning the Depths of Moving People by Watching Frozen People (mannequin challe
   - Generator: Pretrained Unet
   - Discriminator: Pretrained Binary classifier (with Spectral Normalization?)
 - Training
+  0. Generate dataset
+     - Edit ground truth images to become the input images.
+     - This step depend of the problem: input data could be crappified, black & white, noise, vector ...
   1. Train the generator and save generated images. 
-    - Model: UNET (`unet_learner`)
-    - Loss: Mean squared pixel error (`pixelMSE`)
+     - Model: UNET (`unet_learner`)
+     - Loss: Mean squared pixel error (`pixelMSE`)
   2. Train the discriminator with real vs generated images.
-    -  Model: (`create_critic_learner`)
+     -  Model: (`create_critic_learner`)
   3. Ping-pong train both nets `GANLearner` with 2 losses pixelMSE and discriminator.
 - Loss function
-  - Mean squared pixel error
-  - Adaptive loss
+   - Mean squared pixel error
+   - Adaptive loss
 - Metric accuracy is accuracy_thres_expand
 - video
   - pix2pixHD
