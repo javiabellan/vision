@@ -163,17 +163,27 @@ Learning the Depths of Moving People by Watching Frozen People (mannequin challe
 
 # GANs
 
-Useful for data augmentation, B&W colorization, super-resolution, artistic style...
-
 ### Check this [kaggle competition](https://www.kaggle.com/c/generative-dog-images)
 
-- Generator: Pretrained Unet
+- Applications:
+  - Data augmentation: New images from noise
+  - Super Resolution
+  - DeOldification: Colorize classic black and white images and movies
+  - Decrappification
+  - Artistic style
+- Model: 2 nets
+  - Generator: Pretrained Unet
+  - Discriminator: Pretrained Binary classifier (with Spectral Normalization?)
 - Training
-  1. Train a bit the generator and save generated images. `unet_learner` with pixelMSE loss
-  2. Train bit the discriminator with real vs generated images. `create_critic_learner`
+  1. Train the generator and save generated images. 
+    - Model: UNET (`unet_learner`)
+    - Loss: Mean squared pixel error (`pixelMSE`)
+  2. Train the discriminator with real vs generated images.
+    -  Model: (`create_critic_learner`)
   3. Ping-pong train both nets `GANLearner` with 2 losses pixelMSE and discriminator.
-- Discriminative model with Spectral Normalization
-- Loss with adaptive loss
+- Loss function
+  - Mean squared pixel error
+  - Adaptive loss
 - Metric accuracy is accuracy_thres_expand
 - video
   - pix2pixHD
