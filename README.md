@@ -130,8 +130,7 @@ Get bounding boxes.
 > - Check [catalyst segmentation tutorial (Ranger opt, albumentations, ...)](https://colab.research.google.com/github/catalyst-team/catalyst/blob/master/examples/notebooks/segmentation-tutorial.ipynb#scrollTo=Zm7JsNrczOQG)
 > - [this repo](https://github.com/qubvel/segmentation_models)
 
-<p align="center"><img src="img/segmentationInstance.png" /></p>
-
+<p align="center"><img width="50%" src="img/segmentationInstance.png" /></p>
 
 Get pixel-level classes. Note that the model backbone can be a resnet, densenet, inception...
 
@@ -156,39 +155,50 @@ Learning the Depths of Moving People by Watching Frozen People (mannequin challe
 <p align="center"><img src="img/segmentationDepth.jpg"/></p>
 
 ### Surface normal segmentation
-<p align="center"><img src="img/segmentationOthers.png" /></p>
+<p align="center"><img width="60%" src="img/segmentationOthers.png" /></p>
 
 - [paper](https://arxiv.org/abs/1411.4958) (2014)
 
 
 # GANs
 
-### Check this [kaggle competition](https://www.kaggle.com/c/generative-dog-images)
+> #### Reference
+> - Check this [kaggle competition](https://www.kaggle.com/c/generative-dog-images)
+> - [Fast.ai decrappify & DeOldify](https://www.fast.ai/2019/05/03/decrappify)
 
-- Applications:
-  - Data augmentation: New images from noise
+### Applications:
+- Image to image problems
   - Super Resolution
-  - DeOldification: Colorize classic black and white images and movies
+  - Black and white colorization
+    - [Colorful Image Colorization](https://arxiv.org/abs/1603.08511) 2016
+    - [DeOldify](https://github.com/jantic/DeOldify) 2018, SotA
   - Decrappification
   - Artistic style
-- Model: 2 nets
-  - Generator: Pretrained Unet
-  - Discriminator: Pretrained Binary classifier (with Spectral Normalization?)
-- Training
-  0. Generate dataset
-     - Edit ground truth images to become the input images.
-     - This step depend of the problem: input data could be crappified, black & white, noise, vector ...
-  1. Train the generator and save generated images. 
-     - Model: UNET (`unet_learner`)
-     - Loss: Mean squared pixel error (`pixelMSE`)
-  2. Train the discriminator with real vs generated images.
-     -  Model: (`create_critic_learner`)
-  3. Ping-pong train both nets `GANLearner` with 2 losses pixelMSE and discriminator.
-- Loss function
-   - Mean squared pixel error
-   - Adaptive loss
-- Metric accuracy is accuracy_thres_expand
-- video
+  - Data augmentation:
+-  New images
+   - From latent vector
+   - From noise image
+  
+### Training
+0. Generate **labeled dataset**
+   - Edit ground truth images to become the input images.
+   - This step depend of the problem: input data could be crappified, black & white, noise, vector ...
+1. Train the **GENERATOR** (most of the time)
+   - Model: **UNET** with pretrained **ResNet** backbone + **self attention** + spectral normalization
+   - Loss: Mean squared pixel error or L1 loss
+   - Better Loss: Perceptual Loss (aka Feature Loss)
+2. Save generated images.
+3. Train the **DISCRIMINATOR** (aka Critic) with real vs generated images.
+   -  Model: Pretrained **binary classifier** + spectral normalization
+4. Train **BOTH** nets (ping-pong) with 2 losses (original and discriminator).
+   - With a **NoGAN** approach, this step is very quick (a 5% of the total training time, more o less)
+   - With a traditional progressively-sized GAN approach, this step is very slow.
+   - If train so much this step, you start seeing artifacts and glitches introduced in renderings.
+
+### Tricks
+- **Self-Attention** GAN ([SAGAN](https://arxiv.org/abs/1805.08318)): For spatial coherence between regions of the generated image
+- Spectral normalization
+- Video
   - pix2pixHD
   - COVST: Naively add temporal consistency.
   - [Video-to-Video Synthesis](https://tcwang0509.github.io/vid2vid/)
