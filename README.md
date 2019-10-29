@@ -24,7 +24,7 @@
 >   - Colourisation
 >   - Style Transfer
 >   - [**Optical Character Recognition (OCR)**](#ocr)
->   - [**Image Matching (SIFT)**](#image-matching-sift)
+>   - [**Image Matching (SIFT)**](#image-matching-sift) RANSAC?
 > - Part 6: technical
 >   - 📉 [**Loss functions**](#-loss-functions)
 >   - 📏 [**Metrics**](#metrics)
