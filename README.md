@@ -152,6 +152,8 @@ Get pixel-level classes. Note that the model backbone can be a resnet, densenet,
 | [**DeepLabv3**](https://arxiv.org/abs/1706.05587) | Increasing dilatation & field-of-view | 2017     |           |
 | [**LinkNet**  ](https://arxiv.org/abs/1707.03718) | Adds like a resnet                    | 2017     |           |
 | [**PANet**    ](https://arxiv.org/abs/1803.01534) | Path Aggregation Network              | 2018     | Yes       |
+| [**PointRend**](https://arxiv.org/abs/1912.08193) | Image Segmentation as Rendering       | 2019     | ?         |
+
 
 > **Feature Pyramid Networks (FPN): [slides](http://presentations.cocodataset.org/COCO17-Stuff-FAIR.pdf)**
 
