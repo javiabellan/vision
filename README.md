@@ -50,6 +50,9 @@
     - Option 2: `Conv2d(num_features, num_classes, 3, padding=1)` -> `AdaptiveAvgPool2d((1, 1))`
 - To speed up jpeg image I/O from the disk one should not use PIL, skimage and even OpenCV but look for libjpeg-turbo or PyVips.
 
+### Separable convolution
+![](img/separable-convolution.gif)
+
 # Sota CNNs
 
 - **Small nets**: Useful for mobile phones.
