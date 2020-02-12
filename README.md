@@ -55,6 +55,25 @@
 
 # Sota CNNs
 
+![](img/NoisyStudent.png)
+
+
+|                        | Description                               | Paper                                        |
+|:-----------------------|:------------------------------------------|----------------------------------------------|
+| **Inception v3**       |                                           | [Dec 2015](https://arxiv.org/abs/1512.00567) |
+| **Resnet**             |                                           | [Dec 2015](https://arxiv.org/abs/1512.03385) |
+| **SqueezeNet**         |                                           | [Feb 2016](https://arxiv.org/abs/1602.07360) |
+| **Densenet**           | Concatenate previous layers               | [Aug 2016](https://arxiv.org/abs/1608.06993) |
+| **Xception**           | Depthwise Separable Convolutions          | [Oct 2016](https://arxiv.org/abs/1610.02357) |
+| **ResNext**            |                                           | [Nov 2016](https://arxiv.org/abs/1611.05431) |
+| **DPN**                | Dual Path Network                         | [Jul 2017](https://arxiv.org/abs/1707.01629) |
+| **SENet**              | Squeeze and Excitation (channels weights) | [Sep 2017](https://arxiv.org/abs/1709.01507) |
+| **EfficientNet**       | Rethinking Model Scaling                  | [May 2019](https://arxiv.org/abs/1905.11946) |
+| **Noisy Student**      | Self-training                             | [Nov 2019](https://arxiv.org/abs/1911.04252) |
+
+
+
+
 - **Small nets**: Useful for mobile phones.
   - **SqueezeNet** (2016): v1.0: `58.108`, v1.1: `58.250`. [*paper*](https://arxiv.org/abs/1602.07360).
   - **Mobilenet v1** (2017): `69.600`The standard convolution is decomposed into two. Accuracy similar to Resnet-18. [*paper*](https://arxiv.org/abs/1704.04861)
