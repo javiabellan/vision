@@ -136,6 +136,7 @@
 Get bounding boxes.
 
 > ### Check [**detectron 2**](https://ai.facebook.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-).
+> - [Digging into Detectron 2 (part 4)](https://medium.com/@hirotoschwert/digging-into-detectron-2-part-4-3d1436f91266)
 
 - Region-based methods
   - **R-CNN**:        [*paper*](https://arxiv.org/abs/1311.2524)
