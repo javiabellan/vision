@@ -1,5 +1,8 @@
 > - [Google tutorial image classification](https://codelabs.developers.google.com/codelabs/keras-flowers-tpu/)
-> - Paper: [Bag of Tricks for Image Classification](https://arxiv.org/pdf/1812.01187.pdf)
+> - Paper:
+>   - [Bag of Tricks for Image Classification with CNNs](https://arxiv.org/abs/1812.01187) (2018)
+>   - [Compounding the Performance Improvements of Assembled Techniques in a CNN](https://arxiv.org/abs/2001.06268) (2020)
+> - ML training video: [Bag of Tricks](https://youtu.be/JDwAlbr1IB4) (2020)
 > - [awesome-data-augmentation](https://github.com/CrazyVertigo/awesome-data-augmentation)
 
 <h1 align="center">👀 Vision</h1>
