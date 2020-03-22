@@ -1,5 +1,6 @@
 > - [Google tutorial image classification](https://codelabs.developers.google.com/codelabs/keras-flowers-tpu/)
 > - Paper: [Bag of Tricks for Image Classification](https://arxiv.org/pdf/1812.01187.pdf)
+> - [awesome-data-augmentation](https://github.com/CrazyVertigo/awesome-data-augmentation)
 
 <h1 align="center">👀 Vision</h1>
 
