@@ -1,4 +1,5 @@
-### [LEER ESTE TUTORIAL](https://codelabs.developers.google.com/codelabs/keras-flowers-tpu/)
+> - [Google tutorial image classification](https://codelabs.developers.google.com/codelabs/keras-flowers-tpu/)
+> - Paper: [Bag of Tricks for Image Classification](https://arxiv.org/pdf/1812.01187.pdf)
 
 <h1 align="center">👀 Vision</h1>
 
