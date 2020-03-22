@@ -36,13 +36,19 @@
 > [**Resources**](#resources)
 
 ---
-<h3 align="center">Part 1: Image theory</h3>
+<h2 align="center">Image theory</h2>
 
 <p align="center"><img src="img/theory-light-spectrum.jpg" /></p>
 <p align="center"><img width="80%" src="img/theory-multispectral.png" /></p>
 
 
-<h3 align="center">Part 1: Deep Learning</h3>
+
+<h2 align="center">Data Augmentation</h2>
+<p align="center"><img src="img/cutmix.png" /></p>
+
+
+
+<h2 align="center">Deep Learning models</h2>
 
 - [Convolutional Neural Network (CNN)](/posts/5-vision/cnn.md) For fixed size oredered data, like images
   - Variable input size: use **adaptative pooling**, final layers then:
