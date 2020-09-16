@@ -4,6 +4,7 @@
 >   - [Compounding the Performance Improvements of Assembled Techniques in a CNN](https://arxiv.org/abs/2001.06268) (2020)
 > - ML training video: [Bag of Tricks](https://youtu.be/JDwAlbr1IB4) (2020)
 > - [awesome-data-augmentation](https://github.com/CrazyVertigo/awesome-data-augmentation)
+> - http://szeliski.org/Book
 
 <h1 align="center">👀 Vision</h1>
 
