@@ -1,11 +1,3 @@
-> - [Google tutorial image classification](https://codelabs.developers.google.com/codelabs/keras-flowers-tpu/)
-> - Paper:
->   - [Bag of Tricks for Image Classification with CNNs](https://arxiv.org/abs/1812.01187) (2018)
->   - [Compounding the Performance Improvements of Assembled Techniques in a CNN](https://arxiv.org/abs/2001.06268) (2020)
-> - ML training video: [Bag of Tricks](https://youtu.be/JDwAlbr1IB4) (2020)
-> - [awesome-data-augmentation](https://github.com/CrazyVertigo/awesome-data-augmentation)
-> - http://szeliski.org/Book
-
 <h1 align="center">👀 Vision</h1>
 
 > ### Index
@@ -49,18 +41,56 @@
 
 
 
-<h2 align="center">Data Augmentation</h2>
-<p align="center"><img src="img/cutmix.png" /></p>
+<h1 align="center">Part 1: Traditional vision</h1>
 
 
 
-<h2 align="center">Deep Learning models</h2>
+
+# Feature detection and Description
+
+Methods for Image Matching
+
+|                  |  SIFT                    | SURF                | FAST              | BRIEF            | ORB              | BRISK            |
+|:----------------:|:------------------------:|:-------------------:|:-----------------:|:----------------:|:----------------:|:----------------:|
+| Year             | 1999                     | 2006                | 2006              | 2010             | 2011             | 2011             |
+| Feature detector | Difference of Gaussian   | Fast Hessian        | Binary comparison | -                | FAST             | FAST or AGAST    |
+| Spectra          | Local gradient magnitude | Integral box filter |       -           | Local binary     | Local binary     | Local binary     |
+| Orientation      | Yes                      | Yes                 |       -           | No               | Yes              | Yes              |
+| Feature shape    | Square                   | HAAR rectangles     |       -           | Square           | Square           | Square               
+| Feature pattern  | Square                   | Dense               |       -           | Random point-par pixel compares | Trained point-par pixel compares| Trained point-par pixel compares |
+| Distance func.   | Euclidean                | Euclidean           |       -           | Hamming          | Hamming          | Hamming          |
+| Pros             | Accurate                 | Accurate            | FAST (real time)  | FAST (real time) | FAST (real time) | FAST (real time) |
+| Cons             | Slow, patented           | Slow, patented      | Large number of points | Scale and roation invariant | Less scale invariant | Less scale invariant |
+
+### References
+- [3.1 Methods comparison](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-1-ar-feature-detection-description-method-comparison-1NT5I)
+  - [3.2 SIFT](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-2-sift-WtSmG)
+  - [3.3 SURF](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-3-surf-85SBI)
+  - [3.4 FAST](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-4-fast-MMMBw)
+  - [3.5 BRIEF](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-5-brief-CH8ez)
+  - [3.6 ORB](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-6-orb-iqMvt)
+  - [3.7 BRISK](https://www.coursera.org/lecture/ar-technologies-video-streaming/3-7-brisk-T6CnA)
+- [Tutorials in openCV](https://docs.opencv.org/3.4/db/d27/tutorial_py_table_of_contents_feature2d.html)
+- [A Detailed Guide to SIFT for Image Matching (with Python code)](https://www.analyticsvidhya.com/blog/2019/10/detailed-guide-powerful-sift-technique-image-matching-python)
+
+
+
+
+
+
+<h1 align="center">Part 2: Deep Learning</h1>
 
 - [Convolutional Neural Network (CNN)](/posts/5-vision/cnn.md) For fixed size oredered data, like images
   - Variable input size: use **adaptative pooling**, final layers then:
     - Option 1: `AdaptiveAvgPool2d((1, 1))` -> `Linear(num_features, num_classes)` (less computation)
     - Option 2: `Conv2d(num_features, num_classes, 3, padding=1)` -> `AdaptiveAvgPool2d((1, 1))`
 - To speed up jpeg image I/O from the disk one should not use PIL, skimage and even OpenCV but look for libjpeg-turbo or PyVips.
+
+
+
+<h2 align="center">Data Augmentation</h2>
+<p align="center"><img src="img/cutmix.png" /></p>
+
 
 ### Separable convolution
 ![](img/separable-convolution.gif)
@@ -356,16 +386,20 @@ Learning the Depths of Moving People by Watching Frozen People (mannequin challe
 
 
 ---
-<h3 align="center">Part 2:  Traditional vision</h3>
 
-
-# Image Matching (SIFT)
-[Check this article](https://www.analyticsvidhya.com/blog/2019/10/detailed-guide-powerful-sift-technique-image-matching-python)
 
 
 
 # Resources
 
+> - [Google tutorial image classification](https://codelabs.developers.google.com/codelabs/keras-flowers-tpu/)
+> - Paper:
+>   - [Bag of Tricks for Image Classification with CNNs](https://arxiv.org/abs/1812.01187) (2018)
+>   - [Compounding the Performance Improvements of Assembled Techniques in a CNN](https://arxiv.org/abs/2001.06268) (2020)
+> - ML training video: [Bag of Tricks](https://youtu.be/JDwAlbr1IB4) (2020)
+> - [awesome-data-augmentation](https://github.com/CrazyVertigo/awesome-data-augmentation)
+> - http://szeliski.org/Book
+> 
 - A year in computer vision
   - [Part 1](https://towardsdatascience.com/a-year-in-computer-vision-part-1-of-4-eaeb040b6f46)
   - [Part 2](https://towardsdatascience.com/a-year-in-computer-vision-part-2-of-4-893e18e12be0)
