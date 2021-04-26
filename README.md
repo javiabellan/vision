@@ -1,9 +1,15 @@
 <h1 align="center">👀 Vision</h1>
 
-> ### Index
->
-> #### Part 1: Deep Learning
 
+
+# Index
+
+> #### Part 1: Traditional CV
+> -  **Finding Descriptors** (SIFT, SURF, FAST, BRIEF, ORB,BRISK)
+> -  **Image Stitching** (Brute-Force, FLANN, RANSAC)
+>
+>
+> #### Part 2: Deep Learning
 > - 🧱 Part 1: Basics
 >   - [**Classification**](#classification)
 >   - [**Object detection**](#object-detection)
@@ -24,7 +30,6 @@
 >   - Colourisation
 >   - Style Transfer
 >   - [**Optical Character Recognition (OCR)**](#ocr)
->   - [**Image Matching (SIFT)**](#image-matching-sift) RANSAC?
 > - Part 6: technical
 >   - 📉 [**Loss functions**](#-loss-functions)
 >   - 📏 [**Metrics**](#metrics)
@@ -47,8 +52,6 @@
 
 
 # Feature detection and Description
-
-Methods for Image Matching
 
 |                  |  SIFT                    | SURF                | FAST              | BRIEF            | ORB              | BRISK            |
 |:----------------:|:------------------------:|:-------------------:|:-----------------:|:----------------:|:----------------:|:----------------:|
@@ -74,9 +77,37 @@ Methods for Image Matching
 - [A Detailed Guide to SIFT for Image Matching (with Python code)](https://www.analyticsvidhya.com/blog/2019/10/detailed-guide-powerful-sift-technique-image-matching-python)
 
 
+# Image Stitching
+
+Steps:
+
+1. Detecting keypoints (DoG, Harris, etc.) and extracting local invariant descriptors (SIFT, SURF, etc.) from two input images
+2. Matching the descriptors between the images (overlapping area)
+3. Using the RANSAC algorithm to estimate a homography matrix using our matched feature vectors
+4. Applying a warping transformation using the homography matrix obtained from Step #3
+   - Apply perspective transformation on one image using the other image as a reference frame
+
+### References
+- https://www.pyimagesearch.com/2018/12/17/image-stitching-with-opencv-and-python/
+- http://datahacker.rs/005-how-to-create-a-panorama-image-using-opencv-with-python/
 
 
 
+# Motion and optical Flow
+
+
+http://datahacker.rs/013-optical-flow-using-horn-and-schunck-method/
+
+
+
+
+
+
+
+
+
+
+---
 
 <h1 align="center">Part 2: Deep Learning</h1>
 
