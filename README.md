@@ -49,7 +49,23 @@
 <h1 align="center">Part 1: Traditional vision</h1>
 
 
+# Perspective transform
 
+```python
+paper = cv2.imread('./Photos/book.jpg')
+
+pts1 = np.float32([ [219,209], [612,8], [380,493], [785,271] ]) # Coordinates that you want to Perspective Transform
+pts2 = np.float32([     [0,0], [500,0],   [0,400], [500,400] ])  # Size of the Transformed Image
+
+for val in pt1: cv2.circle(paper,(val[0],val[1]),5,(0,255,0),-1)
+    
+# Get transformation matrix M
+M = cv2.getPerspectiveTransform(pts1,pts2)          # When manually few (at least 4) points are detceted
+#M = cv2.findHomography(pts1,pts2,cv.RANSAC,5.0))   # When lots of matching points, and some of them are errors
+
+dst = cv2.warpPerspective(paper,M,(500,400))
+plt.imshow(dst)
+```
 
 # Feature detection and Description
 
