@@ -32,8 +32,8 @@
 
 - [Self-Driving Fundamentals: Featuring Apollo](https://www.udacity.com/course/self-driving-car-fundamentals-featuring-apollo--ud0419) FREE COURSE
 - [Intro to Self-Driving Cars]https://www.udacity.com/course/intro-to-self-driving-cars--nd113) NANODEGREE 4 months
-- [Become a Self-Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) NANODEGREE 6 months
 - [Become a Sensor Fusion Engineer](https://www.udacity.com/course/sensor-fusion-engineer-nanodegree--nd313) NANODEGREE 4 months
+- [Become a Self-Driving Car Engineer](https://www.udacity.com/course/self-driving-car-engineer-nanodegree--nd013) NANODEGREE 6 months
   - [projects description](https://medium.com/udacity/udacity-self-driving-car-engineer-nanodegree-projects-12823ff1cd21)
   - [Repo with Source code of all the projects](https://github.com/ndrplz/self-driving-car)
   - [Other repo with Source code of all the projects](https://github.com/markmisener/udacity-self-driving-car-engineer)
