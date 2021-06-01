@@ -1,6 +1,7 @@
 <h1 align="center">👀 Vision</h1>
 
 
+TODO: https://blog.miguelgrinberg.com/post/video-streaming-with-flask
 
 # Index
 
