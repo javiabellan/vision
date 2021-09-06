@@ -223,7 +223,10 @@ http://datahacker.rs/013-optical-flow-using-horn-and-schunck-method/
 
 
 # Object detection
+
 Get bounding boxes.
+
+[Decoding: State Of The Art Object Detection](https://towardsdatascience.com/decoding-state-of-the-art-object-detection-99f79d97b75d?gi=96374331d71c)
 
 > ### Check [**detectron 2**](https://ai.facebook.com/blog/-detectron2-a-pytorch-based-modular-object-detection-library-).
 > - [Digging into Detectron 2 (part 4)](https://medium.com/@hirotoschwert/digging-into-detectron-2-part-4-3d1436f91266)
