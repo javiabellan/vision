@@ -1,6 +1,7 @@
 <h1 align="center">👀 Vision</h1>
 
-https://arthurdouillard.com/deepcourse/
+
+
 
 https://blog.miguelgrinberg.com/post/video-streaming-with-flask
 
@@ -128,6 +129,12 @@ http://datahacker.rs/013-optical-flow-using-horn-and-schunck-method/
 ---
 
 <h1 align="center">Part 2: Deep Learning</h1>
+
+
+https://arthurdouillard.com/deepcourse/
+
+<p align="center"><img width="60%" src="img/deepcourse.jpg" /></p>
+
 
 - [Convolutional Neural Network (CNN)](/posts/5-vision/cnn.md) For fixed size oredered data, like images
   - Variable input size: use **adaptative pooling**, final layers then:
