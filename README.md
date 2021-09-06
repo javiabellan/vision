@@ -1,7 +1,8 @@
 <h1 align="center">👀 Vision</h1>
 
+https://arthurdouillard.com/deepcourse/
 
-TODO: https://blog.miguelgrinberg.com/post/video-streaming-with-flask
+https://blog.miguelgrinberg.com/post/video-streaming-with-flask
 
 # Index
 
