@@ -1,7 +1,7 @@
 <h1 align="center">👀 Vision</h1>
 
 
-
+https://kornia.github.io/
 
 https://blog.miguelgrinberg.com/post/video-streaming-with-flask
 
@@ -12,7 +12,7 @@ https://blog.miguelgrinberg.com/post/video-streaming-with-flask
 > -  **Image Stitching** (Brute-Force, FLANN, RANSAC)
 >
 >
-> #### Part 2: Deep Learning
+> #### Part 2: Deep Learning (https://arthurdouillard.com/deepcourse/)
 > - 🧱 Part 1: Basics
 >   - [**Classification**](#classification)
 >   - [**Object detection**](#object-detection)
